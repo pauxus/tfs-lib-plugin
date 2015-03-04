@@ -4,7 +4,7 @@ Copyright &copy; Stephan Pauxberger
 
 This plugin is based on the Team Foundation Server plugin by Erik Ramfelt, Olivier Dagenais, CloudBees, Inc. and others.
 
-Licensed under [MIT Licence].
+Licensed under [MIT License].
 
 This plugin contains the Microsoft TFS 2013 SDK for Java [TFS-SDK]
  
@@ -12,21 +12,16 @@ About
 -----
 This plugin provides the Microsoft TFS SDK to other plugins (namely TFS and TFS Control plugins).
     
-We use some heavy "Maven Magic" to workaround the fact that we cannot simply provide the Microsoft SDK as download 
-(due to unclear licensing issues). Therefore we do our own installation of the sdk (without deploying), which
-we consume directly in the plugin part.
+This plugin currently requires the [TFS-SDK] to be present either in the local repository or in some repository
+manager.
 
-The result is a buildable version which should be safe on license terms, but also refrains from using system scope,
-which brings its one problems.
-
-Consumers
----------
-Consumer plugins still need to have their own access to the sdk in order to work (usually still system scoped). They
-could use a short code snippet to download the plugin and extract the sdk.
+A Script (prepareSDK.groovy) is provided as convenience. Simply download the SDK into the root folder and run the script.
+This will create the necessary artifacts. Afterwards run installSDK.cmd oder installSDK.sh to install them into your local
+repository.
 
 TODO
 ----
-Convert to gradle plugin to remove all that Maven Voodoo.
+Implement additional features like using central Server and credential management, polling etc.
 
 
 Wiki and Info
