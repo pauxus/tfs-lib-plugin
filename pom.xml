@@ -78,27 +78,6 @@
 	  </execution>
 	</executions>
       </plugin>
-      <plugin>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>1.4</version>
-        <executions>
-          <execution>
-            <id>match-parent-and-jenkins-version</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireProperty>
-                  <property>jenkins.version</property>
-                  <regex>.*\d.*</regex>
-                  <regexMessage>jenkins.version must match the parent version.</regexMessage>
-                </requireProperty>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
 
