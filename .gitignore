@@ -4,7 +4,7 @@
 /.classpath
 /src/main/resources/rebel.xml
 /.idea/
-/*.iml
+*.iml
 /work/
 pom.xml.versionsBackup
 TFS-SDK-*.zip
