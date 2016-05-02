@@ -13,10 +13,10 @@
   <artifactId>tfs-lib</artifactId>
   <packaging>pom</packaging>
   <name>Team Foundation Server SDK Provider Plug-in</name>
-  <version>12.0.2-SNAPSHOT</version>
+  <version>14.0.3-SNAPSHOT</version>
 
   <properties>
-      <tfsSdkVersion>12.0.2</tfsSdkVersion>
+      <tfsSdkVersion>14.0.3</tfsSdkVersion>
   </properties>
 
   <url>http://wiki.jenkins-ci.org/display/JENKINS/Team+Foundation+Server+Plugin</url>

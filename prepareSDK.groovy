@@ -11,7 +11,7 @@
 
 def ant = new AntBuilder()
 
-File sdkZip = new File("TFS-SDK-12.0.2.zip")
+File sdkZip = new File("TFS-SDK-14.0.3.zip")
 
 if (!sdkZip.isFile()) {
     println "Please dowload the SDK first."
@@ -21,13 +21,13 @@ if (!sdkZip.isFile()) {
 println "Unzipping SDK..."
 ant.unzip(src: sdkZip, dest: 'temp/')
 
-File sdkDir = new File('temp/TFS-SDK-12.0.2')
+File sdkDir = new File('temp/TFS-SDK-14.0.3')
 
 println "zipping natives..."
-ant.zip(destfile: 'temp/tfs-sdk-all-12.0.2-native.zip', basedir: new File(sdkDir, 'redist'), excludes: 'lib/*')
+ant.zip(destfile: 'temp/tfs-sdk-all-14.0.3-native.zip', basedir: new File(sdkDir, 'redist'), excludes: 'lib/*')
 
 println "zipping javadoc"
-ant.jar(destfile: 'temp/tfs-sdk-all-12.0.2-javadoc.jar', basedir: new File(sdkDir, 'docs/javadoc'))
+ant.jar(destfile: 'temp/tfs-sdk-all-14.0.3-javadoc.jar', basedir: new File(sdkDir, 'docs/javadoc'))
 
 
 println "Now call installSDK.sh / installSDK.cmd"
